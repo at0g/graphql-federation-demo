@@ -1,0 +1,29 @@
+{
+  "name": "graphql-federation-demo",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "npx graphql-codegen --config codegen.ts",
+    "config:dev": "npx dotenvx run -f .env.development",
+    "dev:products": "npm run dev -w products",
+    "dev:reviews": "npm run dev -w reviews",
+    "dev:supergraph": "npm run dev -w supergraph",
+    "dev": "npm run config:dev -- -- concurrently -k 'npm:dev:*'"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "author": "Ben Daley",
+  "license": "ISC",
+  "description": "A basic demo of graphql federation using the v2 apollo spec without using apollo server",
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.7.0",
+    "@graphql-codegen/cli": "^5.0.2",
+    "@graphql-codegen/typescript": "^4.0.9",
+    "@graphql-codegen/typescript-resolvers": "^4.2.1",
+    "@graphql-hive/cli": "^0.42.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.5.4"
+  }
+}

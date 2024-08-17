@@ -1,0 +1,25 @@
+enum CURRENCY_CODE {
+    USD
+}
+
+type Money {
+    amount: Float
+    currencyCode: CURRENCY_CODE
+}
+
+type Price {
+    cost: Money
+    deal: Float
+    dealSavings: Money
+}
+
+type Product @key(fields: "id") {
+    id: ID!
+    title: String
+    description: String
+    price: Price!
+}
+
+extend type Query {
+    product(id: ID!): Product
+}

@@ -1,0 +1,16 @@
+sources:
+  - name: Supergraph
+    handler:
+      supergraph:
+        source: '{env.HIVE_SUPERGRAPH_URL}'
+        schemaHeaders:
+          X-Hive-CDN-Key: '{env.HIVE_CDN_TOKEN}'
+# Uncomment the lines below to override the endpoints of specific subgraphs (change PORT env values to prove the changes)
+#  - name: products
+#    handler:
+#      graphql:
+#        endpoint: 'http://localhost:{env.PRODUCTS_PORT}/graphql'
+#  - name: reviews
+#    handler:
+#      graphql:
+#        endpoint: 'http://localhost:{env.REVIEWS_PORT}/graphql'

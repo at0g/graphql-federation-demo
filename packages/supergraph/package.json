@@ -1,0 +1,14 @@
+{
+  "name": "supergraph",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx mesh dev --port $SUPERGRAPH_PORT"
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.94.2",
+    "@graphql-mesh/graphql": "^0.101.0",
+    "@graphql-mesh/plugin-hive": "^0.101.0",
+    "@graphql-mesh/supergraph": "^0.7.0"
+  }
+}
