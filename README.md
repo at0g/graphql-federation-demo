@@ -44,7 +44,7 @@ A super graph schema supporting apollo federation includes meta-data that descri
 
 The super graph implementation in this demo is nothing more than a graphql mesh server configured to point at the super
  graph schema. However the services configuration from the schema can be overwritten (such as to point at a local sub
-graph) to facilitate simpler local development. See [./packages/supergraph/.meshrc.yaml] for an example. 
+graph) to facilitate simpler local development. See [supergraph/.meshrc.yaml](./packages/supergraph/.meshrc.yaml) for an example. 
 
 ## Installation
 
